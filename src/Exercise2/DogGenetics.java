@@ -4,7 +4,7 @@ import java.util.*;
 
 public class DogGenetics {
 
-    private static Random r = new Random();
+    private static final Random r = new Random();
     public static void main(String[] args) {
 
         // array that will hold randomly generated percentages
@@ -21,6 +21,22 @@ public class DogGenetics {
         System.out.print("What is your dog's name? ");
         Scanner scanner = new Scanner(System.in);
         dogName = scanner.nextLine();
+
+        // makes sure that user input doesn't include any integers
+        int tries = 5;
+        while(!dogName.matches("[a-zA-Z ]+")){
+            if (tries > 0){
+                System.out.println(tries + " attempts left");
+                System.out.println("ERROR! Please enter a name with only letters");
+                System.out.println("Re-enter your dog's name");
+                dogName = scanner.nextLine();
+                tries--;
+            } else {
+                System.out.println("You have not provided the correct format" +
+                        "the dog's name. Program ending now.....");
+                System.exit(0);
+            }
+        }
 
         System.out.println("Well then, I have this highly reliable report on " +
                 dogName + "'s prestigious background right here.");
@@ -67,6 +83,7 @@ public class DogGenetics {
             System.out.printf("%d %% %3s %n", percent[i], list.get(i));
         }
 
+        System.out.println();
         System.out.printf("Wow, that's %S the dog!", "quite");
     }
     // method that randomly generates breed from given array
