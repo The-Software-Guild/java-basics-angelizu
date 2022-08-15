@@ -7,6 +7,7 @@ public class HealthyHearts {
         float age, maxRate, zone1, zone2;
         Scanner scanner = new Scanner(System.in);
 
+        //add that num has to be positive
         System.out.print("What's your age? ");
         age = Integer.parseInt(scanner.nextLine());
 
