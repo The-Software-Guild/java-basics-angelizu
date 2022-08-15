@@ -32,6 +32,7 @@ public class RockPaperScissors {
 
             if ((userRounds > maxRounds) || (userRounds < minRounds)) {
                 System.out.println("ERROR!! Can only input number between 1 and 10 ....end of program");
+                System.exit(0);
             }
             else {
                 // program will loop rock paper scissors for the amount of times user specified
@@ -41,6 +42,7 @@ public class RockPaperScissors {
                     userChoice = Integer.parseInt(userInput.nextLine());
                     if (userChoice > 2 || userChoice < 0) {
                         System.out.println("ERROR!! Can only choose 0 1 or 2");
+
                     } else {
                         int pcRandom = random.nextInt(rps.length);
                         String compChoice = rps[pcRandom];
