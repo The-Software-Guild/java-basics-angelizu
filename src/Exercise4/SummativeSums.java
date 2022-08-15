@@ -17,8 +17,7 @@ public class SummativeSums {
     // static method that adds up all elements in an array and returns the sum
     public static int sumArray (int[] array) {
         int sum = 0;
-        int i;
-        for (i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++){
             sum+= array[i];
         }
         return sum;

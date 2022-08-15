@@ -35,13 +35,12 @@ public class RockPaperScissors {
             }
             else {
                 // program will loop rock paper scissors for the amount of times user specified
-                int i;
-                for (i = 1; i <= userRounds; i++) {
+                for (int i = 1; i <= userRounds; i++) {
                     System.out.println("=========================================");
                     System.out.print("Rock, Paper, Scissors? Choose 0 1 or 2 respectively ");
                     userChoice = Integer.parseInt(userInput.nextLine());
                     if (userChoice > 2 || userChoice < 0) {
-                        System.out.println("ERROR!! Can only choose 0 1 or 2 ... end of program");
+                        System.out.println("ERROR!! Can only choose 0 1 or 2");
                     } else {
                         int pcRandom = random.nextInt(rps.length);
                         String compChoice = rps[pcRandom];
